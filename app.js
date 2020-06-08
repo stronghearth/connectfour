@@ -41,21 +41,21 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         for(let y = 0; y < winningArrays.length; y++){
-            const square1 = squares[winningArrays[y][0]]
-            const square2 = squares[winningArrays[y][1]]
-            const square3 = squares[winningArrays[y][2]]
-            const square4 = squares[winningArrays[y][3]]
+            const square1 = squares[winningArrays[y][0]];
+            const square2 = squares[winningArrays[y][1]];
+            const square3 = squares[winningArrays[y][2]];
+            const square4 = squares[winningArrays[y][3]];
 
             if(square1.classList.contains('player-one') &&
-                square2.class.contains('player-one') &&
-                square3.class.contains('player-one') &&
-                square4.class.contains('player-one')) {
+                square2.classList.contains('player-one') &&
+                square3.classList.contains('player-one') &&
+                square4.classList.contains('player-one')) {
                 result.innerHTML = 'Player One Wins!'
             }
             else if (square1.classList.contains('player-two') &&
-                        square2.class.contains('player-two') &&
-                        square3.class.contains('player-two') &&
-                        square4.class.contains('player-two')) {
+                        square2.classList.contains('player-two') &&
+                        square3.classList.contains('player-two') &&
+                        square4.classList.contains('player-two')) {
                             result.innerHTML = 'Player Two Wins!'
                         }
         }
