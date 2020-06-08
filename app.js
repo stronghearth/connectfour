@@ -45,6 +45,22 @@ document.addEventListener('DOMContentLoaded', () => {
             const square2 = squares[winningArrays[y][1]]
             const square3 = squares[winningArrays[y][2]]
             const square4 = squares[winningArrays[y][3]]
+
+            if(square1.classList.contains('player-one') &&
+                square2.class.contains('player-one') &&
+                square3.class.contains('player-one') &&
+                square4.class.contains('player-one')) {
+                result.innerHTML = 'Player One Wins!'
+            }
+            else if (square1.classList.contains('player-two') &&
+                        square2.class.contains('player-two') &&
+                        square3.class.contains('player-two') &&
+                        square4.class.contains('player-two')) {
+                            result.innerHTML = 'Player Two Wins!'
+                        }
         }
     }
+
+squares.forEach(square => square.addEventListener('click', checkBoard))
+
 })
